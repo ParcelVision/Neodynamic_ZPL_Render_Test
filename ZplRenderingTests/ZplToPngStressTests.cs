@@ -67,7 +67,7 @@ namespace ZplRenderingTests
             var pages = zplPrinter.ProcessCommands(labelZpl);
 
             var labelSingleRun = pages.First();
-            File.WriteAllBytes($"label-{testId}-sequential-0.png", labelSingleRun);
+            File.WriteAllBytes($"label-{testId}-parallel-0.png", labelSingleRun);
 
             Parallel.ForEach(Enumerable.Range(1, 10), n =>
             {
