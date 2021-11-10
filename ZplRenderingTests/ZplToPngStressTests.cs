@@ -76,7 +76,7 @@ namespace ZplRenderingTests
                     RenderOutputRotation = RenderOutputRotation.Rot90Clockwise
                 };
 
-                var pagesN = zplPrinter.ProcessCommands(labelZpl);
+                var pagesN = zplPrinterN.ProcessCommands(labelZpl);
                 var labelN = pagesN.First();
 
                 File.WriteAllBytes($"label-{testId}-sequential-{n}.png", labelN);
