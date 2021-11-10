@@ -79,7 +79,7 @@ namespace ZplRenderingTests
                 var pagesN = zplPrinterN.ProcessCommands(labelZpl);
                 var labelN = pagesN.First();
 
-                File.WriteAllBytes($"label-{testId}-sequential-{n}.png", labelN);
+                File.WriteAllBytes($"label-{testId}-parallel-{n}.png", labelN);
 
                 labelN.SequenceEqual(labelSingleRun).Should().BeTrue();
             });
