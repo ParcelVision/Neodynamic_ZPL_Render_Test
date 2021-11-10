@@ -1,0 +1,4 @@
+* text=auto
+*.config        text
+*.cs            text
+*.csproj        text
