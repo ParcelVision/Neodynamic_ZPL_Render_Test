@@ -23,14 +23,17 @@ namespace ZplRenderingTests
             var labelZplBase64 = await File.ReadAllTextAsync(base64LabelFile);
             var labelZpl = Convert.FromBase64String(labelZplBase64);
 
-            using var zplPrinter = new ZPLPrinter(licenseOwner, licenseKey)
+            byte[] labelSingleRun = Array.Empty<byte>();
+            using (var zplPrinter = new ZPLPrinter(licenseOwner, licenseKey)
             {
                 RenderOutputRotation = RenderOutputRotation.Rot90Clockwise
-            };
-            var pages = zplPrinter.ProcessCommands(labelZpl);
+            })
+            {
+                var pages = zplPrinter.ProcessCommands(labelZpl);
 
-            var labelSingleRun = pages.First();
-            await File.WriteAllBytesAsync($"label-{testId}-sequential-0.png", labelSingleRun);
+                labelSingleRun = pages.First();
+                await File.WriteAllBytesAsync($"label-{testId}-sequential-0.png", labelSingleRun);
+            }
 
             for (var n = 1; n <= 10; n++)
             {
@@ -38,8 +41,7 @@ namespace ZplRenderingTests
                 {
                     RenderOutputRotation = RenderOutputRotation.Rot90Clockwise
                 };
-
-                var pagesN = zplPrinter.ProcessCommands(labelZpl);
+                var pagesN = zplPrinterN.ProcessCommands(labelZpl);
                 var labelN = pagesN.First();
 
                 await File.WriteAllBytesAsync($"label-{testId}-sequential-{n}.png", labelN);
