@@ -18,8 +18,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Neodynamic.SDK.ThermalLabel" Version="10.0.21.1007" />
-    <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="3.0.21.929" />
+    <PackageReference Include="Neodynamic.SDK.ThermalLabel" Version="10.0.21.1018" />
+    <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="3.0.21.1030" />
     <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="1.68.1" />
   </ItemGroup>
 
