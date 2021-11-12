@@ -1,12 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Neodynamic.SDK.Printing;
-using Neodynamic.SDK.ZPLPrinter;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -34,69 +30,6 @@ namespace ZplRenderingTests
 
         public class HermesLabelDataSource
         {
-            public HermesLabelDataSource(
-                string clientName,
-                string hermes2DBarcode,
-                string carrierLogo,
-                string playLogo,
-                string service1Text,
-                string service2Text,
-                string service3Text,
-                string service4Text,
-                string parcelshopName,
-                string sortLevel1CodeAndDescription,
-                string dlyMethodDescription,
-                string sortLevel2TypeAndDescription,
-                string sortLevel3TypeAndDescription,
-                string sortLevel4TypeAndDescription,
-                string sortLevel5TypeAndDescription,
-                string destinationAddressLine1,
-                string destinationAddressLine2,
-                string destinationAddressLine3,
-                string destinationAddressLine4,
-                string destinationAddressLine5,
-                string destinationAddressLine6,
-                string destinationAddressLine7,
-                string destinationAddressLine8,
-                string currentDate,
-                string weight,
-                string customerRef1,
-                string customerRef2,
-                string hermesBarcode,
-                string hermesBarcodeDisplay
-            )
-            {
-                ClientName = clientName;
-                Hermes2DBarcode = hermes2DBarcode;
-                CarrierLogo = carrierLogo;
-                PlayLogo = playLogo;
-                Service1Text = service1Text;
-                Service2Text = service2Text;
-                Service3Text = service3Text;
-                Service4Text = service4Text;
-                ParcelshopName = parcelshopName;
-                SortLevel1CodeAndDescription = sortLevel1CodeAndDescription;
-                DlyMethodDescription = dlyMethodDescription;
-                SortLevel2TypeAndDescription = sortLevel2TypeAndDescription;
-                SortLevel3TypeAndDescription = sortLevel3TypeAndDescription;
-                SortLevel4TypeAndDescription = sortLevel4TypeAndDescription;
-                SortLevel5TypeAndDescription = sortLevel5TypeAndDescription;
-                DestinationAddressLine1 = destinationAddressLine1;
-                DestinationAddressLine2 = destinationAddressLine2;
-                DestinationAddressLine3 = destinationAddressLine3;
-                DestinationAddressLine4 = destinationAddressLine4;
-                DestinationAddressLine5 = destinationAddressLine5;
-                DestinationAddressLine6 = destinationAddressLine6;
-                DestinationAddressLine7 = destinationAddressLine7;
-                DestinationAddressLine8 = destinationAddressLine8;
-                CurrentDate = currentDate;
-                Weight = weight;
-                CustomerRef1 = customerRef1;
-                CustomerRef2 = customerRef2;
-                HermesBarcode = hermesBarcode;
-                HermesBarcodeDisplay = hermesBarcodeDisplay;
-            }
-
             public string ClientName { get; set; }
             public string CarrierLogo { get; set; }
             public string Hermes2DBarcode { get; set; }
