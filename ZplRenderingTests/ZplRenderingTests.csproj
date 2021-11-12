@@ -20,11 +20,17 @@
     </PackageReference>
     <PackageReference Include="Neodynamic.SDK.ThermalLabel" Version="10.0.21.1018" />
     <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="3.0.21.1030" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="1.68.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.80.3" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <None Update="hermesLabelTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="hermesLabelData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="hermesLabel.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
