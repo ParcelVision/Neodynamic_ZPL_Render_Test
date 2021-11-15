@@ -19,8 +19,13 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Neodynamic.SDK.ThermalLabel" Version="10.0.21.1018" />
-    <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="3.0.21.1030" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.80.3" />
+    <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="3.0.21.1110" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="libSkiaSharp.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 

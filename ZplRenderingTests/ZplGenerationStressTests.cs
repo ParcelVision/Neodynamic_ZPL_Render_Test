@@ -13,7 +13,6 @@ namespace ZplRenderingTests
         [Fact]
         public async Task ZplGenerations_WithValidData_ShouldProduceResult()
         {
-
             var labelTemplate = await File.ReadAllTextAsync("hermesLabelTemplate.txt");
             var labelData = await File.ReadAllTextAsync("hermesLabelData.json");
             var data = JsonConvert.DeserializeObject<HermesLabelDataSource>(labelData);
@@ -30,6 +29,7 @@ namespace ZplRenderingTests
 
         public class HermesLabelDataSource
         {
+#pragma warning disable 8618
             public string ClientName { get; set; }
             public string CarrierLogo { get; set; }
             public string Hermes2DBarcode { get; set; }
@@ -59,6 +59,7 @@ namespace ZplRenderingTests
             public string CustomerRef2 { get; set; }
             public string HermesBarcode { get; set; }
             public string HermesBarcodeDisplay { get; set; }
+#pragma warning restore 8618
         }
     }
 }
