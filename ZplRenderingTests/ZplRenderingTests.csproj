@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.80.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,12 +21,6 @@
     </PackageReference>
     <PackageReference Include="Neodynamic.SDK.ThermalLabel" Version="10.0.21.1018" />
     <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="3.0.21.1110" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="libSkiaSharp.so">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 
